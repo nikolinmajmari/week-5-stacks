@@ -4,6 +4,7 @@ import stack.StackInterface;
 import stack.StackIterator;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class ArrayStack<T> implements StackInterface<T> {
@@ -67,7 +68,12 @@ public class ArrayStack<T> implements StackInterface<T> {
         if (top == -1){
             return new Object[]{};
         }
-        return Arrays.copyOf(stack, size);
+        Object[] array =  Arrays.copyOf(stack, size);
+        Object[] reversed = new Object[size];
+        for (int i=0;i<size;i++){
+            reversed[i] = array[size-1-i];
+        }
+        return reversed;
     }
 
     @Override
