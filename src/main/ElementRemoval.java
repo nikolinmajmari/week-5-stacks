@@ -12,59 +12,23 @@ public class ElementRemoval {
 
 
     public static <T>StackInterface<T> createNewWithout(StackInterface<T> stack,T element){
-        StackInterface<T> temp = new ArrayStack<>();
-        StackInterface<T> all = new ArrayStack<>();
-        while (!stack.isEmpty()){
-            T item = stack.pop();
-            all.push(item);
-            if (!element.equals(item)){
-                temp.push(item);
-            }
-        }
-        StackInterface<T> newStack = new ArrayStack<>();
-        while (!temp.isEmpty()){
-            newStack.push(temp.pop());
-        }
-        while (!all.isEmpty()){
-            stack.push(all.pop());
-        }
-        return newStack;
+        // todo your code here
+        return null;
     }
 
     public static <T>void removeElement(StackInterface<T> stack,T element)
     {
-        StackInterface<T> temp = new ArrayStack<>();
-        while (!stack.isEmpty()){
-            T item = stack.pop();
-            if (!element.equals(item)){
-                temp.push(item);
-            }
-        }
-        while (!temp.isEmpty()){
-            stack.push(temp.pop());
-        }
+        // todo your code here
+       return;
     }
 
     public static <T>QueueInterface<T> createNewWithout(QueueInterface<T> queue, T element){
-        QueueInterface<T> temp = new ArrayQueue<>();
-        for (int i=0;i<queue.size();i++){
-            T item = queue.dequeue();
-            if (!element.equals(item)){
-                temp.enqueue(item);
-            }
-            queue.enqueue(item);
-        }
-        return temp;
+        // todo your code here
+        return null;
     }
 
     public static <T>void removeElement(QueueInterface<T> queue,T element){
-        int size = queue.size();
-        for (int i=0;i<size;i++){
-            T item = queue.dequeue();
-            if (!element.equals(item)){
-                queue.enqueue(item);
-            }
-        }
+        // todo your code here
     }
 
     public static void main(String[] args) {

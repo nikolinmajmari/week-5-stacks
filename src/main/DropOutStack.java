@@ -22,41 +22,24 @@ public class DropOutStack<T> implements StackInterface<T> {
 
     @Override
     public void push(T element) {
-        size = Math.min(array.length, size + 1);
-        top = (top + 1) % array.length;
-        if(size == array.length) {
-            end = (end + 1) % array.length;
-        } else if (size==1) {
-            end = top;
-        }
-        array[top] = element;
+        // todo your code here
     }
 
     @Override
     public T pop() {
-        if(size == 0) {
-            return null;
-        }
-        size --;
-        T data = array[top];
-        top = (array.length + top - 1) % array.length;
-        if(size == 0){
-            top = -1;
-            end = 0;
-        }
-        return data;
+        // todo your code here
+        return null;
     }
 
     @Override
     public T peek() {
-        if(size == 0) {
-            return null;
-        }
-        return array[top];
+        // todo your code here
+      return null;
     }
 
     @Override
     public boolean isEmpty() {
+
         return size == 0;
     }
 

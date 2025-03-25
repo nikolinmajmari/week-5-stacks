@@ -8,30 +8,8 @@ import java.util.Stack;
 public class ExpressionBracketsValidator {
 
     public static boolean isValidExpression(String expression) {
-        StackInterface<Character> stack = new ArrayStack<Character>();
-        for (int i = 0; i < expression.length(); i++) {
-            char c = expression.charAt(i);
-            if (c == '{' || c == '[' || c == '(') {
-                stack.push(c);
-            } else if (c == ')') {
-                if (stack.isEmpty() || !stack.peek().equals('(')) {
-                    return false;
-                }
-                stack.pop();
-            }else if (c == '}') {
-                if (stack.isEmpty() || !stack.peek().equals('{')) {
-                    return false;
-                }
-                stack.pop();
-            }
-            else if (c == ']') {
-                if (stack.isEmpty() || !stack.peek().equals('[')) {
-                    return false;
-                }
-                stack.pop();
-            }
-        }
-        return stack.isEmpty();
+        // todo your code here
+        return false;
     }
 
 

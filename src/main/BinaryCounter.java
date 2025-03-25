@@ -14,16 +14,8 @@ public class BinaryCounter {
     }
 
     List<String> count(int n) {
-        queue.enqueue("1");
-        List<String> result = new ArrayList<>();
-        while (n>0) {
-            String s = queue.dequeue();
-            result.add(s);
-            n--;
-            queue.enqueue(s + '0');
-            queue.enqueue(s + '1');
-        }
-        return result;
+        // todo your code here
+        return List.of();
     }
 
 

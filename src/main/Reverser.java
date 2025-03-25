@@ -8,57 +8,25 @@ import stack.StackInterface;
 public class Reverser {
 
     public static <T>void reverse(StackInterface<T> stack) {
-        StackInterface<T> a = new ListStack<>();
-        StackInterface<T> b = new ListStack<>();
-        while (!stack.isEmpty()) {
-            a.push(stack.pop());
-        }
-        while (!a.isEmpty()) {
-            b.push(a.pop());
-        }
-        while (!b.isEmpty()) {
-            stack.push(b.pop());
-        }
+        // todo your code here
     }
 
     public static <T> void pushToEnd(StackInterface<T> stack,T element) {
-        if (stack.isEmpty()) {
-            stack.push(element);
-            return;
-        }
-        T top = stack.pop();
-        pushToEnd(stack, element);
-        stack.push(top);
+        // todo your code here
     }
 
     public static <T>void reverseRecursively(StackInterface<T> stack) {
-        if (stack.isEmpty()) {
-            return;
-        }
-        T top = stack.pop();
-        reverseRecursively(stack);
-        pushToEnd(stack, top);
+        // todo your code here
     }
 
 
     public static <T>void reverse(QueueInterface<T> queue) {
-        StackInterface<T> stack = new ListStack<>();
-        for (T item : queue) {
-            stack.push(item);
-        }
-        while (!stack.isEmpty()) {
-            queue.enqueue(stack.pop());
-        }
+        // todo your code here
     }
 
 
     public static <T>void reverseRecursively(QueueInterface<T> queue) {
-        if (queue.isEmpty()) {
-            return;
-        }
-        T item = queue.dequeue();
-        reverseRecursively(queue);
-        queue.enqueue(item);
+        // todo your code here
     }
 
 

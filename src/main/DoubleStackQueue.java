@@ -18,52 +18,39 @@ public class DoubleStackQueue<T> implements QueueInterface<T> {
         right = new ArrayStack<>();
     }
 
-    public void rollRight(){
-        while(!left.isEmpty()){
-            right.push(left.pop());
-        }
-    }
-    public void rollLeft(){
-        while(!right.isEmpty()){
-            left.push(right.pop());
-        }
-    }
-
 
     @Override
     public void enqueue(T element) {
-        rollRight();
-        right.push(element);
+        // todo your code here
     }
 
     @Override
     public T dequeue() {
-        rollLeft();
-        return left.pop();
+        // todo your code here
+        return null;
     }
 
     @Override
     public boolean isEmpty() {
-        return left.isEmpty() && right.isEmpty();
+        // todo your code here
+        return false;
     }
 
     @Override
     public int size() {
+        // todo your code here
         return 0;
     }
 
     @Override
     public T peek() {
-        if (left.isEmpty()){
-            return right.peek();
-        }else {
-            return left.peek();
-        }
+        // todo your code here
+      return null;
     }
 
     @Override
     public Object[] toArray() {
-        rollRight();
+        // todo your code here
         return right.toArray();
     }
 

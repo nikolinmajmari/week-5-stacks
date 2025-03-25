@@ -17,24 +17,20 @@ public class StackQueue<T> implements QueueInterface<T> {
 
     @Override
     public void enqueue(T element) {
-        if (stack.isEmpty()) {
-            stack.push(element);
-        }else{
-            T node = stack.pop();
-            enqueue(element);
-            stack.push(node);
-        }
+        // todo your code here
     }
 
 
     @Override
     public T dequeue() {
-        return stack.pop();
+        // todo your code here
+        return null;
     }
 
     @Override
     public boolean isEmpty() {
-        return stack.isEmpty();
+        // todo your code here
+        return false;
     }
 
     @Override
