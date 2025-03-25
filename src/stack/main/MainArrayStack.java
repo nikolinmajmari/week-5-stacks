@@ -4,6 +4,8 @@ import stack.StackInterface;
 import util.Helpers;
 import stack.array.ArrayStack;
 
+import java.util.Iterator;
+
 public class MainArrayStack {
     public static void main(String[] args) {
         StackInterface<Integer> stack = new ArrayStack<>();
@@ -26,6 +28,10 @@ public class MainArrayStack {
         System.out.println(Helpers.max(stack)); /// 5
         System.out.println(Helpers.min(stack)); /// 1
         System.out.print("[");
+        Iterator it = stack.iterator();
+        while (it.hasNext()) {
+            System.out.print(it.next() + ", ");
+        }
         for(Integer node: stack){
             System.out.printf("%d, ", node);
         }

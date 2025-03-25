@@ -61,7 +61,7 @@ public class DoubleStackQueue<T> implements QueueInterface<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new QueueIterator<T>(this);
+        return null;
     }
 
     public static void main(String[] args) {

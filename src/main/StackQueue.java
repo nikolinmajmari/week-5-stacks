@@ -50,7 +50,7 @@ public class StackQueue<T> implements QueueInterface<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new QueueIterator<T>(this);
+        return null;
     }
 
     @Override
