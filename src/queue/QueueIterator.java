@@ -4,19 +4,17 @@ import java.util.Iterator;
 
 public class QueueIterator<T> implements Iterator<T> {
 
-    private final QueueInterface<T> queue;
 
-    public QueueIterator(QueueInterface<T> queue) {
-        this.queue = queue;
+    public QueueIterator() {
     }
 
     @Override
     public boolean hasNext() {
-        return !queue.isEmpty();
+        return false;
     }
 
     @Override
     public T next() {
-        return queue.dequeue();
+        return null;
     }
 }

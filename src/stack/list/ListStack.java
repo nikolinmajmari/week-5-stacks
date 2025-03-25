@@ -7,56 +7,40 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public class ListStack<T> implements StackInterface<T> {
-    protected Node<T> top;
-    protected int size = 0;
-    public ListStack() {
-        top = null;
+
+    public ListStack(){
+
     }
     @Override
     public void push(T element) {
-        Node<T> newNode = new Node<>(element);
-        newNode.next = top;
-        top = newNode;
-        size++;
+      // todo your code here
     }
     @Override
     public T pop() {
-        if (top == null) {
-            return null;
-        }
-        T element = top.data;
-        top = top.next;
-        size--;
-        return element;
+        // todo your code here
+        return null;
     }
 
     @Override
     public T peek() {
-        if (top == null) {
-            return null;
-        }
-        return top.data;
+        // todo your code here
+        return null;
     }
     @Override
     public boolean isEmpty() {
-        return top == null;
+        // todo your code here
+        return false;
     }
     @Override
     public int size() {
-        return size;
+        // todo your code here
+        return 0;
     }
 
     @Override
     public Object[] toArray() {
-        Object[] array = new Object[size];
-        Node<T> current = top;
-        int i = 0;
-        while (current != null) {
-            array[i] = current.data;
-            current = current.next;
-            i++;
-        }
-        return array;
+        // todo your code here
+        return null;
     }
 
     @Override
@@ -66,6 +50,6 @@ public class ListStack<T> implements StackInterface<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new StackIterator<T>(this);
+        return null;
     }
 }
