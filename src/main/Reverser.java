@@ -8,11 +8,23 @@ import stack.StackInterface;
 public class Reverser {
 
     public static <T>void reverse(StackInterface<T> stack) {
-        // todo your code here
+        QueueInterface<T> queue = new ListQueue<>();
+        while (!stack.isEmpty()) {
+            queue.enqueue(stack.pop());
+        }
+        while (!queue.isEmpty()) {
+            stack.push(queue.dequeue());
+        }
     }
 
     public static <T> void pushToEnd(StackInterface<T> stack,T element) {
-        // todo your code here
+        if (stack.isEmpty()) {
+            stack.push(element);
+            return;
+        }
+        T node = stack.pop();
+        pushToEnd(stack, element);
+        stack.push(node);
     }
 
     public static <T>void reverseRecursively(StackInterface<T> stack) {

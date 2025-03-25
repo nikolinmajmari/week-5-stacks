@@ -12,8 +12,17 @@ public class ZerosAndNines {
     }
 
     public Integer findLeastMultiple(int n) {
-        // todo your code here
-        return null;
+        queue.enqueue("9");
+        while(true){
+            String temp = queue.dequeue();
+            if(Integer.parseInt(temp)%n==0){
+                return Integer.parseInt(temp);
+            }
+            queue.enqueue(temp+"0");
+            queue.enqueue(temp+"9");
+        }
+
+
     }
     public static void main(String[] args) {
         System.out.println(new ZerosAndNines().findLeastMultiple(505));
